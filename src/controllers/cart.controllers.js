@@ -2,8 +2,8 @@ import { findCartById, updateCart } from "../service/cartService.js";
 import { findProductById } from "../service/productService.js";
 import { createNewTicket } from "../service/ticketService.js";
 import productModel from "../models/MongoDB/productsModel.js";
-//import CustomError from "../utils/customErrors/CustomError.js";
-//import { EErrors } from "../utils/customErrors/enums.js";
+import CustomError from "../utils/customErrors/CustomError.js";
+import { EErrors } from "../utils/customErrors/enums.js";
 
 export const getCart = async (req, res, next) => {
     const idCart = req.user.idCart;

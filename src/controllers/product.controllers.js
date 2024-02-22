@@ -1,7 +1,7 @@
 import { findProductById, createProduct, updateOneProduct, paginateProducts, deleteOneProduct } from "../service/productService.js";
-//import CustomError from "../utils/customErrors/CustomError.js";
-//import { generateProductErrorInfo } from "../utils/customErrors/info.js";
-//import { EErrors } from "../utils/customErrors/enums.js";
+import CustomError from "../utils/customErrors/CustomError.js";
+import { generateProductErrorInfo } from "../utils/customErrors/info.js";
+import { EErrors } from "../utils/customErrors/enums.js";
 
 export const getProducts = async (req, res, next) => {
     const { limit = 10, page = 1, sort = "", category = "" } = req.query;
